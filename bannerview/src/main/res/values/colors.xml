@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="banner_bottom_bar_bg_day">#036E78</color>
+    <color name="dot_select_color">#ECDF34</color>
+    <color name="dot_unselect_color">#D3D1D1</color>
+</resources>
