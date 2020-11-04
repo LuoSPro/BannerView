@@ -107,7 +107,7 @@ public class BannerViewPager extends ViewPager {
         //参数： 消息，延迟时间
         //需求：让用户自定义，但也要有个默认值  2500
         mHandler.sendEmptyMessageDelayed(SCROLL_MSG,mCutDownTime);
-        Log.d(TAG, "startRoll: handler is running.....");
+        //Log.d(TAG, "startRoll: handler is running.....");
     }
 
     /**
@@ -118,7 +118,7 @@ public class BannerViewPager extends ViewPager {
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         //解除绑定
-        mActivity.unregisterActivityLifecycleCallbacks(mActivityLifecycleCallbacks);
+        mActivity.getApplication().unregisterActivityLifecycleCallbacks(mActivityLifecycleCallbacks);
         mHandler.removeMessages(SCROLL_MSG);
         mHandler = null;
     }
@@ -215,8 +215,8 @@ public class BannerViewPager extends ViewPager {
         @Override
         public void onActivityResumed(@NonNull Activity activity) {
             //注意监听的是不是当前Activity的生命周期，因为我们这里监听的是所有的Activity的生命周期
-            Log.d(TAG, "onActivityResumed: current activity --> " + activity);
-            Log.d(TAG, "onActivityResumed: current getContext() --> " + getContext());
+            //Log.d(TAG, "onActivityResumed: current activity --> " + activity);
+            //Log.d(TAG, "onActivityResumed: current getContext() --> " + getContext());
             if (activity == mActivity){
                 //开启轮播
                 mHandler.sendEmptyMessageDelayed(mCutDownTime,SCROLL_MSG);
