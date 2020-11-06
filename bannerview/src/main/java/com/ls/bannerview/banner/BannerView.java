@@ -73,7 +73,6 @@ public class BannerView extends RelativeLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         //先测量，后面才能获取数据
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
     }
 
     /**
