@@ -102,12 +102,14 @@ public class BannerViewPager extends ViewPager {
      * 实现自动轮播
      */
     public void startRoll(){
-        //清除消息，防止被多次调用时，间隔时间就没有2500了
-        mHandler.removeMessages(SCROLL_MSG);
-        //参数： 消息，延迟时间
-        //需求：让用户自定义，但也要有个默认值  2500
-        mHandler.sendEmptyMessageDelayed(SCROLL_MSG,mCutDownTime);
-        //Log.d(TAG, "startRoll: handler is running.....");
+        if (mHandler != null){
+            //清除消息，防止被多次调用时，间隔时间就没有2500了
+            mHandler.removeMessages(SCROLL_MSG);
+            //参数： 消息，延迟时间
+            //需求：让用户自定义，但也要有个默认值  2500
+            mHandler.sendEmptyMessageDelayed(SCROLL_MSG,mCutDownTime);
+            //Log.d(TAG, "startRoll: handler is running.....");
+        }
     }
 
     /**
@@ -119,8 +121,10 @@ public class BannerViewPager extends ViewPager {
         super.onDetachedFromWindow();
         //解除绑定
         mActivity.getApplication().unregisterActivityLifecycleCallbacks(mActivityLifecycleCallbacks);
-        mHandler.removeMessages(SCROLL_MSG);
-        mHandler = null;
+        if (mHandler != null){//判空，避免空指针异常
+            mHandler.removeMessages(SCROLL_MSG);
+            mHandler = null;
+        }
     }
 
     /**

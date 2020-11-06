@@ -12,8 +12,8 @@
         app:dotSize="3dp"
         app:dotDistance="1dp"
         app:dotGravity="right"
-        app:withProportion="1"
-        app:heightProportion="1"
+        app:withProportion="8"
+        app:heightProportion="3"
         app:bottomColor="@color/banner_bottom_bar_bg_day"
         app:dotIndicatorFocus="@color/dot_select_color"
         app:dotIndicatorNormal="@color/dot_unselect_color"/>
