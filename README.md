@@ -9,7 +9,7 @@ app:withProportion="8"
 app:heightProportion="3"
 ```
 
-一般8:3能有一个较为常见的轮播图效果
+一般8:3能有一个较为常见的轮播图效果,但如果图片是正方形就不太适合这个比例
 
 ![效果1](https://user-images.githubusercontent.com/52788705/98061473-e74d8400-1e86-11eb-96f1-04099edb6970.gif)
 ![效果2](https://user-images.githubusercontent.com/52788705/98061451-def54900-1e86-11eb-8d9f-f19b61abd745.gif)
@@ -51,67 +51,121 @@ dependencies {
 ```
 
 #### Activity:
+##### kotlin用法
 
-```java
-mBannerView.setAdapter(new BannerAdapter() {
-    @Override
-    public View getView(int position, View convertView) {//支持用户自定义轮播的View
-        ImageView imageView = null;
-        //covertView：缓存的View
-        if (convertView == null){
-            imageView = new ImageView(MainActivity.this);
-            //设置图片的填充方式
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        }else{
-            imageView = (ImageView) convertView;
+```kotlin
+class MainActivity : BaseSkinActivity() {
+
+    private lateinit var mHandler: Handler
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        mHandler = Handler(Looper.myLooper()!!)
+        mHandler.postDelayed(Runnable { showListData() }, 50)
+    }
+
+    private fun showListData() {
+        banner_view.setAdapter(object : BannerAdapter() {
+            override fun getView(position: Int, convertView: View?): View {//支持用户自定义轮播的View
+                val imageView: ImageView = if (convertView == null) {
+                    ImageView(this@MainActivity)
+                } else {
+                    //covertView：缓存的View
+                    convertView as ImageView
+                }
+                imageView.scaleType = ImageView.ScaleType.FIT_XY
+                imageView.setImageResource(R.drawable.ic_launcher_background)
+                return imageView
+            }
+
+            //支持用户自定义指示器的圆点个数
+            override fun getCount() = 5
+
+            //支持用户自定义指示器每个ItemView的描述
+            override fun getBannerDesc(position: Int): String {
+                return "哈哈哈哈"
+            }
+        })
+        //开启自动滚动
+        banner_view.startRoll()
+        //设置监听
+        banner_view.setBannerItemClickListener {
+            Toast.makeText(this@MainActivity, "current position $it", Toast.LENGTH_SHORT)
+                .show()
         }
-        String imagePath = mData.get(position).getCoverMiddle();
-        Glide.with(MainActivity.this).load(imagePath)
-            .placeholder(R.drawable.ic_launcher_foreground)//加载占位图（默认图片）
-            .into(imageView);
-        return imageView;
     }
+}
 
-    @Override
-    public int getCount() {//支持用户自定义指示器的圆点个数
-        return 5;
-    }
-
-    @Override
-    public String getBannerDesc(int position) {//支持用户自定义指示器每个ItemView的描述
-        return mData.get(position).getTitle();
-    }
-});
-//开启自动滚动
-mBannerView.startRoll();
-//设置监听
-mBannerView.setBannerItemClickListener(new BannerViewPager.BannerItemClickListener() {
-    @Override
-    public void onItemClick(int position) {
-        Toast.makeText(MainActivity.this,"current position " + position,Toast.LENGTH_SHORT).show();
-    }
-});
 ```
 
-
-
-## License
-
-BannerView is released under the [Apache 2.0 license](https://github.com/google/gson/blob/master/LICENSE).
+##### java用法
 
 ```
-Copyright 2008 Google Inc.
+public class MainActivity extends AppCompatActivity {
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+    private BannerView mBannerView;
+    private Handler mHandler;
 
-    http://www.apache.org/licenses/LICENSE-2.0
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+        mBannerView = findViewById(R.id.banner_view);
+        mHandler = new Handler(Looper.myLooper());
+        //必要的工作
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                requestListData();
+            }
+        },50);
+    }
+
+    private void showListData() {
+        mBannerView.setAdapter(new BannerAdapter() {
+            @Override
+            public View getView(int position, View convertView) {//支持用户自定义轮播的View
+                ImageView imageView = null;
+                //covertView：缓存的View
+                if (convertView == null){
+                    imageView = new ImageView(MainActivity.this);
+                    imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                }else{
+                    imageView = (ImageView) convertView;
+                }
+                imageView.setImageResource(R.drawable.ic_launcher_foreground);
+                return imageView;
+            }
+
+            //支持用户自定义指示器的圆点个数
+            @Override
+            public int getCount() {
+                return 5;
+            }
+
+            //支持用户自定义指示器每个ItemView的描述
+            @Override
+            public String getBannerDesc(int position) {
+                return "哈哈哈哈";
+            }
+        });
+        //开启自动滚动
+        mBannerView.startRoll();
+        //设置监听
+        mBannerView.setBannerItemClickListener(new BannerViewPager.BannerItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Toast.makeText(MainActivity.this,"current position " + position,Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+}
+
 ```
+### 注意：
+使用BannerView的时候，一定要用Handler的postDelayed方法去开启，并且设置延时大于50毫秒以上
 
+原因：因为View的绘制顺序和Activity的生命周期的问题，当Activity的`onCreate()`方法和`onResume()`方法执行的时候，View还没开始测量，又由于我们设置了BannerView为自适应高度（Layout布局里面设置的是`wrap_content`属性），在Activity的onCreate()方法去初始化BannerView的时候，去测量他的宽度的为0，导致BannerView的高度也会为0，所以就不能显示BannerView了。
+详情请看我的这篇文章：[【Android源码】View的绘制流程](https://www.jianshu.com/p/1feb9ca20667)
