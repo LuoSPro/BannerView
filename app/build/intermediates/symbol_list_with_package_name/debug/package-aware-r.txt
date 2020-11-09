@@ -963,7 +963,6 @@ id expand_activities_button
 id expanded_menu
 id flip
 id forever
-id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap

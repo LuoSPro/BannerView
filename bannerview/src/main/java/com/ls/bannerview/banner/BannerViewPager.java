@@ -5,9 +5,9 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Build;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -34,16 +34,7 @@ public class BannerViewPager extends ViewPager {
     //2.实现自动轮播 -- 页面切换间隔时间（默认值）
     private int mCutDownTime = 2500;
 
-    private Handler mHandler = new Handler(){
-        @Override
-        public void handleMessage(@NonNull Message msg) {
-            //每个多少秒X秒切换到下一页
-            //切换到下一页
-            setCurrentItem(getCurrentItem() + 1);
-            //不断循环执行
-            startRoll();
-        }
-    };
+    private Handler mHandler = null;
 
     // 改变ViewPager切换的速率 - 自定义页面切换Scroller
     private BannerScroller mScroller;
@@ -62,7 +53,7 @@ public class BannerViewPager extends ViewPager {
 
     public BannerViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-
+        initHandler();
         //这里的Context就是Activity
         mActivity = (Activity)getContext();
 
@@ -82,6 +73,19 @@ public class BannerViewPager extends ViewPager {
         }
 
         mConvertView = new ArrayList<>();
+    }
+
+    private void initHandler() {
+        mHandler = new Handler(Looper.myLooper()){
+            @Override
+            public void handleMessage(@NonNull Message msg) {
+                //每个多少秒X秒切换到下一页
+                //切换到下一页
+                setCurrentItem(getCurrentItem() + 1);
+                //不断循环执行
+                startRoll();
+            }
+        };
     }
 
     /**
@@ -124,6 +128,26 @@ public class BannerViewPager extends ViewPager {
         if (mHandler != null){//判空，避免空指针异常
             mHandler.removeMessages(SCROLL_MSG);
             mHandler = null;
+        }
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        if (mAdapter != null) {
+            initHandler();
+            startRoll();
+            // 管理Activity的生命周期
+            mActivity.getApplication().registerActivityLifecycleCallbacks(mActivityLifecycleCallbacks);
+        }
+        super.onAttachedToWindow();
+        try {
+            Field mFirstLayout = ViewPager.class.getDeclaredField("mFirstLayout");
+            mFirstLayout.setAccessible(true);
+            mFirstLayout.set(this,false);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
         }
     }
 

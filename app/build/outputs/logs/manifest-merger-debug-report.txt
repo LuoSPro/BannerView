@@ -8,7 +8,6 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.3] C:\Users\15846\.g
 MERGED from [:bannerview] F:\Android\Android\BannerView\bannerview\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\a16582d9085a6ced18002a2f99fd3cfd\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\67eeda0aad9aa8528889f7415288ddde\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\ea3d29bb81780d0c6d9b11da7e50dfa4\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\a5c7bbaacd419387f84f9f5585177774\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\dffd89e923406b9655a93eb2dd678aee\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\d630ec29d5719543f334afc925f36308\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -20,8 +19,6 @@ MERGED from [androidx.activity:activity:1.0.0] C:\Users\15846\.gradle\caches\tra
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\d87e02b8e8542bf982231e381f5a7013\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\6af6ec81dd24dd51a7e7ec82b8ad3831\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.3.1] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\b3afb9991f338de5e00c51a977da9f16\core-1.3.1\AndroidManifest.xml:17:1-26:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\4820d80099b562b213e4def54489784d\jetified-gifdecoder-4.11.0\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\b8ac7795b9538b3136b6996bafdb0c1d\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\79ca95a5c721b818d2851bc6454d35f5\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\bc93b7f3299a0663a1ff9d0bbc58b09b\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\a4b37b92c334be76b7da98da501de59d\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
@@ -59,12 +56,8 @@ application
 ADDED from F:\Android\Android\BannerView\app\src\main\AndroidManifest.xml:8:5-22:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.3] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\4c944d70350a33ff47c50edaa0b1e02d\constraintlayout-2.0.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.3] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\4c944d70350a33ff47c50edaa0b1e02d\constraintlayout-2.0.3\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\ea3d29bb81780d0c6d9b11da7e50dfa4\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\ea3d29bb81780d0c6d9b11da7e50dfa4\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [androidx.core:core:1.3.1] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\b3afb9991f338de5e00c51a977da9f16\core-1.3.1\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.1] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\b3afb9991f338de5e00c51a977da9f16\core-1.3.1\AndroidManifest.xml:24:5-89
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\4820d80099b562b213e4def54489784d\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\4820d80099b562b213e4def54489784d\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\79ca95a5c721b818d2851bc6454d35f5\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\79ca95a5c721b818d2851bc6454d35f5\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
@@ -107,8 +100,6 @@ MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\15846\.gradle\caches\t
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\a16582d9085a6ced18002a2f99fd3cfd\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\67eeda0aad9aa8528889f7415288ddde\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\67eeda0aad9aa8528889f7415288ddde\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\ea3d29bb81780d0c6d9b11da7e50dfa4\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\ea3d29bb81780d0c6d9b11da7e50dfa4\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\a5c7bbaacd419387f84f9f5585177774\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\a5c7bbaacd419387f84f9f5585177774\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\dffd89e923406b9655a93eb2dd678aee\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -131,10 +122,6 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\15846\.gradl
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\6af6ec81dd24dd51a7e7ec82b8ad3831\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.3.1] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\b3afb9991f338de5e00c51a977da9f16\core-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.3.1] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\b3afb9991f338de5e00c51a977da9f16\core-1.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\4820d80099b562b213e4def54489784d\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\4820d80099b562b213e4def54489784d\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\b8ac7795b9538b3136b6996bafdb0c1d\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\b8ac7795b9538b3136b6996bafdb0c1d\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\79ca95a5c721b818d2851bc6454d35f5\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\79ca95a5c721b818d2851bc6454d35f5\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\15846\.gradle\caches\transforms-2\files-2.1\bc93b7f3299a0663a1ff9d0bbc58b09b\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
