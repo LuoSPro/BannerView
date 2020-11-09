@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                requestListData();
+                showListData();
             }
         },50);
     }
