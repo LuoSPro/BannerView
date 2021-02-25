@@ -29,7 +29,7 @@ allprojects {
 
 ```
 dependencies {
-	implementation 'com.github.LuoSPro:BannerView:1.0.1'
+	implementation 'com.github.LuoSPro:BannerView:1.0.2'
 }
 ```
 
