@@ -101,7 +101,7 @@ class MainActivity : BaseSkinActivity() {
 
 ##### java用法
 
-```
+```java
 public class MainActivity extends AppCompatActivity {
 
     private BannerView mBannerView;
