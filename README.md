@@ -11,8 +11,7 @@ app:heightProportion="3"
 
 一般8:3能有一个较为常见的轮播图效果,但如果图片是正方形就不太适合这个比例
 
-![效果1](https://user-images.githubusercontent.com/52788705/98061473-e74d8400-1e86-11eb-96f1-04099edb6970.gif)
-![效果2](https://user-images.githubusercontent.com/52788705/98061451-def54900-1e86-11eb-8d9f-f19b61abd745.gif)
+<img src="https://user-images.githubusercontent.com/52788705/98061473-e74d8400-1e86-11eb-96f1-04099edb6970.gif" alt="img" width="300" height="600" style="zoom:50%;" />     <img src="https://user-images.githubusercontent.com/52788705/98061451-def54900-1e86-11eb-8d9f-f19b61abd745.gif" alt="img" width="300" height="600" style="zoom:50%;" />
 
 ## Download
 
